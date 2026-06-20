@@ -1,25 +1,4 @@
-# AWS Amplify CI/CD Build Configuration
-# This file tells Amplify how to build and deploy the React app.
-#
-# To deploy:
-# 1. Push this repo to GitHub/GitLab/CodeCommit
-# 2. Connect the repo in AWS Amplify Console
-# 3. Amplify will auto-detect this file
-#
-# Environment variables to set in Amplify Console:
-#   REACT_APP_ENV=production
-#   (Amplify auto-injects aws-exports.js after `amplify push`)
-
 version: 1
-
-backend:
-  phases:
-    build:
-      commands:
-        # Install Amplify CLI and deploy backend resources
-        - npm ci -g @aws-amplify/cli
-        - amplify push --yes
-
 frontend:
   phases:
     preBuild:
@@ -35,16 +14,3 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-
-  # SPA routing — redirect all 404s to index.html
-  customHeaders:
-    - pattern: '**/*'
-      headers:
-        - key: 'Strict-Transport-Security'
-          value: 'max-age=31536000; includeSubDomains'
-        - key: 'X-Content-Type-Options'
-          value: 'nosniff'
-        - key: 'X-Frame-Options'
-          value: 'DENY'
-        - key: 'X-XSS-Protection'
-          value: '1; mode=block'
