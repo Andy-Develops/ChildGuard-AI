@@ -124,13 +124,14 @@ export default function SubmitSightingPage() {
           };
           img.src = URL.createObjectURL(form.photoFile);
         });
-        var response = await fetch(UPLOAD_URL_ENDPOINT, {
-          method: 'POST',
+        var urlResponse = await fetch(UPLOAD_URL_ENDPOINT);
+        var urlData = await urlResponse.json();
+        await fetch(urlData.uploadUrl, {
+          method: 'PUT',
           body: blob,
           headers: { 'Content-Type': 'image/jpeg' },
         });
-        var data = await response.json();
-        console.log('Photo uploaded successfully:', data.fileKey);
+        console.log('Photo uploaded successfully:', urlData.fileKey);
       }
       setSubmitState('success');
     } catch (err) {
