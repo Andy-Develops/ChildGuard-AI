@@ -6,7 +6,7 @@ import './SubmitSightingPage.css';
 const MAX_FILE_SIZE_MB = 10;
 const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic'];
 
-const UPLOAD_URL_ENDPOINT = 'https://yxqpm25z6sqyo62sxczmxc4pcy0hdwlg.lambda-url.us-east-1.on.aws/';
+const UPLOAD_URL_ENDPOINT = '/api/upload';
 
 const INITIAL_FORM = {
   relatedCaseId: '',
