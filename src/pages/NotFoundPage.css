@@ -1,0 +1,37 @@
+.notfound-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.notfound-code {
+  font-size: 120px;
+  font-weight: 900;
+  color: rgba(46, 134, 193, 0.15);
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1;
+  margin-bottom: -20px;
+}
+
+.notfound-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.notfound-desc {
+  font-size: 16px;
+  color: #64748B;
+  margin-bottom: 32px;
+}
+
+.notfound-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

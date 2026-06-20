@@ -1,0 +1,3 @@
+# SPA Redirect — required for React Router to work on direct URL access
+# This handles client-side routing (all paths → index.html)
+/*  /index.html  200

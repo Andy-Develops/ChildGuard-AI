@@ -1,0 +1,34 @@
+/* App-level layout */
+#main-content {
+  padding-top: 96px; /* demo banner (32px) + navbar (64px) */
+  min-height: calc(100vh - 96px);
+}
+
+/* Skip to main content for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px 16px;
+  background: #2E86C1;
+  color: white;
+  font-weight: 600;
+  z-index: 99999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

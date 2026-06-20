@@ -1,0 +1,174 @@
+.footer {
+  background: #060E1C;
+  border-top: 1px solid rgba(46, 134, 193, 0.2);
+  padding: 56px 0 0;
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ── Brand column ───────────────────── */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-logo svg {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 5px rgba(46, 134, 193, 0.5));
+}
+
+.footer-logo span {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.footer-demo-note {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #F39C12;
+  background: rgba(243, 156, 18, 0.1);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  border-radius: 4px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+/* ── Columns ────────────────────────── */
+.footer-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #2E86C1;
+  margin-bottom: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul a {
+  font-size: 14px;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul a:hover {
+  color: #ffffff;
+}
+
+/* ── Emergency box ──────────────────── */
+.emergency-box {
+  background: rgba(231, 76, 60, 0.07);
+  border: 1px solid rgba(231, 76, 60, 0.2);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.emergency-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.emergency-number {
+  font-size: 22px;
+  font-weight: 800;
+  color: #E74C3C;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.emergency-number.ncmec {
+  font-size: 18px;
+  color: #3EA8E5;
+}
+
+.emergency-sub {
+  font-size: 12px;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+/* ── Bottom bar ─────────────────────── */
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: #475569;
+}
+
+.footer-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-size: 10px;
+  font-weight: 600;
+  color: #2E86C1;
+  background: rgba(46, 134, 193, 0.1);
+  border: 1px solid rgba(46, 134, 193, 0.25);
+  border-radius: 3px;
+  padding: 2px 8px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive ─────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

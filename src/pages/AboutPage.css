@@ -1,0 +1,553 @@
+.about-page {
+  padding-bottom: 0;
+}
+
+/* ── Hero ────────────────────────────────── */
+.about-hero {
+  padding: 56px 0 48px;
+  border-bottom: 1px solid rgba(46, 134, 193, 0.12);
+}
+
+.about-title {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 4px;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  color: #2E86C1;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 16px;
+  color: #94A3B8;
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+.demo-callout {
+  background: rgba(243, 156, 18, 0.08);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #94A3B8;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.demo-callout strong {
+  color: #F39C12;
+}
+
+/* ── Sections ────────────────────────────── */
+.about-section {
+  padding: 64px 0;
+  border-bottom: 1px solid rgba(46, 134, 193, 0.08);
+}
+
+.section-header-centered {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header-centered .section-subtitle {
+  margin-bottom: 0;
+}
+
+/* ── Mission split ───────────────────────── */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-split-text p {
+  font-size: 15px;
+  color: #94A3B8;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-split-text p:last-child {
+  margin-bottom: 0;
+}
+
+.mission-stat {
+  background: rgba(13, 31, 60, 0.7);
+  border: 1px solid rgba(46, 134, 193, 0.15);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.mission-stat:last-child {
+  margin-bottom: 0;
+}
+
+.mission-stat-num {
+  font-size: 36px;
+  font-weight: 900;
+  color: #3EA8E5;
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.mission-stat-label {
+  font-size: 14px;
+  color: #CBD5E1;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.mission-stat-source {
+  font-size: 11px;
+  color: #475569;
+  font-style: italic;
+}
+
+/* ── NCMEC section ───────────────────────── */
+.ncmec-section {
+  padding: 64px 0;
+  background: rgba(13, 31, 60, 0.4);
+  border-top: 1px solid rgba(46, 134, 193, 0.12);
+  border-bottom: 1px solid rgba(46, 134, 193, 0.12);
+}
+
+.ncmec-card {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  background: rgba(13, 31, 60, 0.7);
+  border: 1px solid rgba(46, 134, 193, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.ncmec-badge {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.ncmec-content h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.ncmec-content p {
+  font-size: 15px;
+  color: #94A3B8;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.ncmec-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0 16px;
+}
+
+.ncmec-disclaimer {
+  font-size: 11px;
+  color: #475569;
+  font-style: italic;
+}
+
+/* ── Principles grid ─────────────────────── */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.principle-card {
+  background: rgba(13, 31, 60, 0.6);
+  border: 1px solid rgba(46, 134, 193, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.principle-card:hover {
+  border-color: rgba(46, 134, 193, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.principle-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.principle-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.principle-desc {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* ── Tech grid ───────────────────────────── */
+.tech-section {
+  background: rgba(6, 14, 28, 0.5);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.tech-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: rgba(13, 31, 60, 0.6);
+  border: 1px solid rgba(46, 134, 193, 0.15);
+  border-radius: 8px;
+  padding: 18px;
+  transition: border-color 0.2s;
+}
+
+.tech-card:hover {
+  border-color: rgba(46, 134, 193, 0.35);
+}
+
+.tech-card.tech-coming-soon {
+  border-color: rgba(243, 156, 18, 0.2);
+  background: rgba(243, 156, 18, 0.03);
+}
+
+.tech-logo {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 40px;
+  text-align: center;
+}
+
+.tech-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-role {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+.coming-soon-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #F39C12;
+  background: rgba(243, 156, 18, 0.15);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  border-radius: 3px;
+  padding: 1px 6px;
+  letter-spacing: 0.5px;
+}
+
+.rekognition-todo {
+  font-size: 11px;
+  color: #475569;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* ── Architecture diagram ────────────────── */
+.arch-diagram {
+  background: rgba(6, 14, 28, 0.8);
+  border: 1px solid rgba(46, 134, 193, 0.2);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.arch-layer {
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.arch-layer-client { background: rgba(46, 134, 193, 0.1); border: 1px solid rgba(46, 134, 193, 0.3); }
+.arch-layer-auth   { background: rgba(39, 174, 96, 0.08); border: 1px solid rgba(39, 174, 96, 0.25); }
+.arch-layer-api    { background: rgba(243, 156, 18, 0.08); border: 1px solid rgba(243, 156, 18, 0.2); }
+.arch-layer-data   { background: rgba(155, 89, 182, 0.08); border: 1px solid rgba(155, 89, 182, 0.2); }
+
+.arch-layer-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.arch-nodes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.arch-node {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #CBD5E1;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.arch-node small {
+  display: block;
+  font-size: 10px;
+  color: #475569;
+  font-weight: 400;
+}
+
+.arch-node-future {
+  opacity: 0.5;
+  border-style: dashed;
+}
+
+.arch-arrow {
+  font-size: 20px;
+  color: #2E86C1;
+  opacity: 0.4;
+  padding: 4px 0;
+}
+
+/* ── Timeline ────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #2E86C1, rgba(46, 134, 193, 0.1));
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 32px;
+  padding-left: 24px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -21px;
+  top: 3px;
+  font-size: 14px;
+  color: #2E86C1;
+  width: 16px;
+  text-align: center;
+}
+
+.timeline-item.current .timeline-marker {
+  color: #27AE60;
+}
+
+.timeline-phase {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.timeline-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.timeline-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #27AE60;
+  background: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.35);
+  border-radius: 3px;
+  padding: 1px 7px;
+  letter-spacing: 0.5px;
+}
+
+.timeline-item.upcoming .timeline-label {
+  color: #64748B;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* ── CTA section ─────────────────────────── */
+.about-cta-section {
+  padding: 64px 0 80px;
+}
+
+.about-cta-card {
+  background: linear-gradient(135deg, rgba(46, 134, 193, 0.12), rgba(13, 31, 60, 0.8));
+  border: 1px solid rgba(46, 134, 193, 0.3);
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+}
+
+.about-cta-card h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.about-cta-card > p {
+  font-size: 15px;
+  color: #94A3B8;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+/* ── Demo accounts ───────────────────────── */
+.demo-accounts-preview {
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: inline-block;
+  text-align: left;
+  max-width: 100%;
+}
+
+.demo-accounts-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #475569;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.demo-accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.demo-account {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.demo-role {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.demo-account code {
+  font-size: 11px;
+  color: #64748B;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 1000px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .demo-accounts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  .ncmec-card {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .arch-nodes {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-cta-card {
+    padding: 28px 20px;
+  }
+}

@@ -1,0 +1,203 @@
+/* ChildGuard AI — Global Styles */
+:root {
+  --navy-dark:    #0A1628;
+  --navy-mid:     #0D1F3C;
+  --navy-light:   #162848;
+  --blue-accent:  #2E86C1;
+  --blue-bright:  #3EA8E5;
+  --blue-hover:   #1A6FA8;
+  --white:        #FFFFFF;
+  --gray-100:     #F4F6F9;
+  --gray-300:     #CBD5E1;
+  --gray-500:     #64748B;
+  --gray-700:     #334155;
+  --red-alert:    #E74C3C;
+  --green-safe:   #27AE60;
+  --yellow-warn:  #F39C12;
+  --font-main:    'Inter', sans-serif;
+  --font-cond:    'Roboto Condensed', sans-serif;
+  --border-radius: 6px;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg:    0 8px 32px rgba(0,0,0,0.5);
+  --transition:   all 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--navy-dark);
+  color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--blue-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--blue-bright);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, textarea, select {
+  font-family: var(--font-main);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--navy-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue-accent);
+  border-radius: 3px;
+}
+
+/* Demo banner */
+.demo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    45deg,
+    #F39C12,
+    #F39C12 10px,
+    #E67E22 10px,
+    #E67E22 20px
+  );
+  color: var(--navy-dark);
+  text-align: center;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: var(--font-cond);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: var(--blue-accent);
+  color: var(--white);
+  border-color: var(--blue-accent);
+}
+
+.btn-primary:hover {
+  background: var(--blue-hover);
+  border-color: var(--blue-hover);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(46, 134, 193, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue-accent);
+  border-color: var(--blue-accent);
+}
+
+.btn-outline:hover {
+  background: var(--blue-accent);
+  color: var(--white);
+}
+
+.btn-danger {
+  background: var(--red-alert);
+  color: var(--white);
+  border-color: var(--red-alert);
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 17px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-active {
+  background: rgba(231, 76, 60, 0.2);
+  color: #E74C3C;
+  border: 1px solid rgba(231, 76, 60, 0.4);
+}
+
+.badge-found {
+  background: rgba(39, 174, 96, 0.2);
+  color: #27AE60;
+  border: 1px solid rgba(39, 174, 96, 0.4);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+  font-family: var(--font-cond);
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--gray-300);
+  margin-bottom: 40px;
+}
+
+.page-wrapper {
+  padding-top: 90px; /* offset for fixed navbar + demo banner */
+  min-height: 100vh;
+}
