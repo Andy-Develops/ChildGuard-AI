@@ -111,17 +111,25 @@ export default function SubmitSightingPage() {
 
     try {
       if (form.photoFile) {
-        const reader = new FileReader();
-        const base64 = await new Promise((resolve) => {
-          reader.onloadend = () => resolve(reader.result.split(',').pop());
-          reader.readAsDataURL(form.photoFile);
+        var canvas = document.createElement('canvas');
+        var img = new Image();
+        var blob = await new Promise(function(resolve) {
+          img.onload = function() {
+            var maxW = 1200;
+            var scale = Math.min(1, maxW / img.width);
+            canvas.width = img.width * scale;
+            canvas.height = img.height * scale;
+            canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob(function(b) { resolve(b); }, 'image/jpeg', 0.7);
+          };
+          img.src = URL.createObjectURL(form.photoFile);
         });
-        const response = await fetch(UPLOAD_URL_ENDPOINT, {
+        var response = await fetch(UPLOAD_URL_ENDPOINT, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ photo: base64 }),
+          body: blob,
+          headers: { 'Content-Type': 'image/jpeg' },
         });
-        const data = await response.json();
+        var data = await response.json();
         console.log('Photo uploaded successfully:', data.fileKey);
       }
       setSubmitState('success');
