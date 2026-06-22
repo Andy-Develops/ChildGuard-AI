@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminCreateCase from "./pages/AdminCreateCase";
+import AdminDashboard from "./pages/AdminDashboard";
 import { AuthProvider } from './context/AuthContext';
 
 import DemoBanner from './components/DemoBanner';
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/submit-sighting" element={<SubmitSightingPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/admin/create-case" element={<AdminCreateCase />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
