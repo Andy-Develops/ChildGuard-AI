@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 export default function AdminDashboard() {
+  const { user } = useAuth();
   const [cases, setCases] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/cases')
+    const token = user && user.token ? user.token : '';
+    fetch('/api/cases', { headers: { 'Authorization': 'Bearer ' + token } })
       .then(res => res.json())
       .then(data => { setCases(data.cases || []); setLoading(false); })
       .catch(err => { console.error(err); setLoading(false); });
-  }, []);
+  }, [user]);
 
   if (loading) return React.createElement('p', null, 'Loading...');
 

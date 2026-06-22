@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useAuth } from "../context/AuthContext";
 const UPLOAD_URL = '/api/upload';
 const CREATE_CASE_URL = '/api/create-case';
 export default function AdminCreateCase() {
+  const { user } = useAuth();
   const [form, setForm] = useState({caseNumber:'', childName:'', age:'', description:''});
   const [photo, setPhoto] = useState(null);
   const [status, setStatus] = useState('');
@@ -18,7 +20,7 @@ export default function AdminCreateCase() {
     try {
       const res = await fetch(UPLOAD_URL, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (user && user.token ? user.token : '')},
         body: JSON.stringify({filename: photo.name, contentType: photo.type})
       });
       const data = await res.json();
@@ -30,7 +32,7 @@ export default function AdminCreateCase() {
       setStatus('Creating case...');
       const caseRes = await fetch(CREATE_CASE_URL, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (user && user.token ? user.token : '')},
         body: JSON.stringify({...form, photoKey: data.fileKey})
       });
       const caseData = await caseRes.json();
