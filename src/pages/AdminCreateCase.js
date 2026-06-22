@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const UPLOAD_URL = 'https://yxqpm25z6sqyo62sxczmxc4pcy0hdwlg.lambda-url.us-east-1.on.aws/';
+const UPLOAD_URL = '/api/upload';
 const CREATE_CASE_URL = '/api/create-case';
 export default function AdminCreateCase() {
   const [form, setForm] = useState({caseNumber:'', childName:'', age:'', description:''});
