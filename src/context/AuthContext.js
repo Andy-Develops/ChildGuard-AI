@@ -29,8 +29,8 @@ export function AuthProvider({ children }) {
     try {
       const currentUser = await getCurrentUser();
       const session = await fetchAuthSession();
-      const groups = session.tokens?.accessToken?.payload['cognito:groups'] || [];
-      const role = groups.includes('admin') ? 'admin' : groups.includes('law_enforcement') ? 'law_enforcement' : 'public';
+      console.log('SESSION:', JSON.stringify(session)); const groups = session.tokens?.accessToken?.payload['cognito:groups'] || session.tokens?.idToken?.payload['cognito:groups'] || [];
+      const role = groups.includes('Admin') || groups.includes('admin') ? 'admin' : groups.includes('law_enforcement') ? 'law_enforcement' : 'public';
       setUser({
         email: currentUser.signInDetails?.loginId || currentUser.username,
         name: currentUser.username,
