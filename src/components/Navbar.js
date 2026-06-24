@@ -75,6 +75,8 @@ export default function Navbar() {
           <li><Link to="/gallery" className={isActive('/gallery')}>Missing Children</Link></li>
           <li><Link to="/submit-sighting" className={isActive('/submit-sighting')}>Submit Sighting</Link></li>
           <li><Link to="/about" className={isActive('/about')}>About</Link></li>
+          {isAdmin && <li><Link to="/admin/dashboard" className={isActive("/admin/dashboard")}>Dashboard</Link></li>}
+          {isAdmin && <li><Link to="/admin/create-case" className={isActive("/admin/create-case")}>Create Case</Link></li>}
         </ul>
 
         {/* Auth area */}
@@ -127,6 +129,8 @@ export default function Navbar() {
           <li><Link to="/gallery" className="nav-link">Missing Children</Link></li>
           <li><Link to="/submit-sighting" className="nav-link">Submit Sighting</Link></li>
           <li><Link to="/about" className="nav-link">About</Link></li>
+          {isAdmin && <li><Link to="/admin/dashboard" className="nav-link">Dashboard</Link></li>}
+          {isAdmin && <li><Link to="/admin/create-case" className="nav-link">Create Case</Link></li>}
           <li className="mobile-divider" />
           {isAuthenticated ? (
             <>

@@ -74,7 +74,7 @@ export function AuthProvider({ children }) {
   const isAuthenticated = !!user;
   const isPublic = user?.role === 'public';
   const isLawEnforcement = user?.role === 'law_enforcement' || user?.role === 'admin';
-  const isAdmin = user?.role === 'admin';
+  const isAdmin = user?.groups?.includes('admin') || user?.role === 'admin';
   const canViewContactInfo = isLawEnforcement;
   const canManageCases = isAdmin;
 
